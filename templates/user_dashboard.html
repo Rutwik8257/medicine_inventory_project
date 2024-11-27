@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user_dashboard.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ session['username'] }}!</h1>
+
+        <!-- Logout Button in Top Right Corner -->
+        <div class="logout-box">
+            <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+        </div>
+
+        <div class="nav-box">
+            <ul class="nav-links">
+                <!-- Navigation links for regular users -->
+                <li><a href="{{ url_for('check_inventory_form') }}">Check Inventory</a></li>
+                <li><a href="{{ url_for('items_below_limit') }}">Items Below Limit</a></li>
+                <li><a href="{{ url_for('expired_items') }}">Expired Items</a></li>
+                <li><a href="{{ url_for('total_inventory_graph') }}">Inventory Graph</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

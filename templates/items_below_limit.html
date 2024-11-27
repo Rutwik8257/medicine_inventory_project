@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Below Quantity Limit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/itemsbelow.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Items Below Minimum Limit</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Alert Limit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>{{ item['Item ID'] }}</td>
+                        <td>{{ item['Item Name'] }}</td>
+                        <td>{{ item['Quantity'] }}</td>
+                        <td>{{ item['Quantity Limit'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

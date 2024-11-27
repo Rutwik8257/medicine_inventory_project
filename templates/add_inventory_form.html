@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Inventory Item</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/invo.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Add Inventory Item</h1>
+        
+        <!-- Display error message if item ID and name combination does not match existing records -->
+        {% if item_name_mismatch %}
+            <p style="color: red; font-weight: bold;">Error: The Item ID is already in use with a different Item Name. Please ensure the Item Name matches the existing entry for this Item ID.</p>
+        {% endif %}
+        
+        <!-- Display error message if exact item with same ID, name, and expiry date exists -->
+        {% if item_exists %}
+            <p style="color: red; font-weight: bold;">Error: This Item ID, Name, and Expiry Date combination already exists. Please enter a unique combination.</p>
+        {% endif %}
+        
+        <form action="{{ url_for('add_inventory_form') }}" method="POST">
+            <div class="form-group">
+                <label for="item_id">Item ID:</label>
+                <input type="number" id="item_id" name="item_id" required>
+            </div>
+            <div class="form-group">
+                <label for="item_name">Item Name:</label>
+                <input type="text" id="item_name" name="item_name" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="unit_price">Unit Price:</label>
+                <input type="number" id="unit_price" name="unit_price" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry_date">Expiry Date:</label>
+                <input type="date" id="expiry_date" name="expiry_date">
+            </div>
+            <div class="form-group">
+                <label for="quantity_limit">Quantity Limit:</label>
+                <input type="number" id="quantity_limit" name="quantity_limit">
+            </div>
+            <div class="form-group">
+                <button type="submit">Add Item</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

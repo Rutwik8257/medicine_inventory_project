@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory Management System</h1>
+        
+        <!-- Navigation box for the menu items -->
+        <div class="nav-box">
+            <ul class="nav-links">
+                <li><a href="{{ url_for('add_inventory_form') }}">Add Inventory Item</a></li>
+                <li><a href="{{ url_for('check_inventory_form') }}">Check Inventory by Item ID</a></li>
+                <li><a href="{{ url_for('items_below_limit') }}">Items Below Quantity Limit</a></li>
+                <li><a href="{{ url_for('expired_items') }}">Expired Items</a></li>
+                <li><a href="{{ url_for('update_inventory_form') }}">Update Inventory Item</a></li>
+                <li><a href="{{ url_for('delete_inventory_form') }}">Delete Inventory Item</a></li>
+                <li><a href="{{ url_for('total_inventory_graph') }}">Total Inventory Graph</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

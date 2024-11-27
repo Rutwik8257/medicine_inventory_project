@@ -1,0 +1,111 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling with background image */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../css/medical-equipment-desk-with-copy-space_23-2148519754.jpg'); /* Adjust path if needed */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Dark overlay to improve readability over background image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for desired effect */
+    z-index: -1;
+}
+
+/* Form container styling */
+/* Welcome message styling */
+.welcome-message {
+    text-align: center;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Center welcome message on the page */
+.welcome-message h2 {
+    color: #ffffff;
+    font-size: 36px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Optional shadow for contrast */
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Heading styling */
+.form-container h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+/* Sign-up / login link styling */
+.form-container .switch-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.form-container .switch-link a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form-container .switch-link a:hover {
+    text-decoration: underline;
+}

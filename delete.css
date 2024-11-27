@@ -1,0 +1,96 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../css/istockphoto-1369987284-2048x2048-transformed.jpeg'); /* Ensure the correct image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Form Container Styling */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 40px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Increased max-width for larger form */
+    text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.5em; /* Increased heading size */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 25px; /* Increased bottom margin for better spacing */
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em; /* Increased label font size */
+    color: #333;
+    margin-bottom: 10px; /* Increased space between label and input */
+}
+
+.form-group input, .form-group select {
+    width: 100%; /* Full width */
+    padding: 50px; /* Increased padding for larger input boxes */
+    font-size: 1.2em; /* Increased font size for better readability */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Round corners */
+    box-sizing: border-box; /* Ensures padding is included in total width */
+}
+
+/* Button Styling */
+input[type="submit"] {
+    background-color: #e74c3c; /* Red color for delete action */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Increased padding for larger button */
+    font-size: 1.3em; /* Larger font size */
+    cursor: pointer;
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Full width to match input fields */
+}
+
+input[type="submit"]:hover {
+    background-color: #c0392b; /* Darker red when hovered */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust heading for smaller screens */
+    }
+
+    .form-group input, .form-group select {
+        font-size: 1.2em; /* Larger input text for mobile */
+        padding: 18px; /* Adjust padding for mobile */
+    }
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2em;
+}

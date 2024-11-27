@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Inventory Graph</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/graph.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Total Inventory Graph</h1>
+        <div class="chart-container">
+            {{ graph_html|safe }}
+        </div>
+    </div>
+</body>
+</html>

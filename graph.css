@@ -1,0 +1,66 @@
+/* Apply background image to the whole page */
+html, body {
+    height: 100%;  /* Ensure the body and html take full height */
+    margin: 0;     /* Remove default margin */
+    padding: 0;    /* Remove default padding */
+    overflow: hidden;  /* Prevent scrolling */
+}
+
+body {
+    background-image: url('../css/istockphoto-1369987284-2048x2048-transformed.jpeg');
+    background-size: cover;  /* Ensure the image covers the entire page */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Prevent image repetition */
+}
+
+/* Container styling for the page */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);  /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 700px;  /* Increase width */
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Centering and styling the chart */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+/* Title styling */
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+/* Style adjustments for chart title within the image */
+.chart-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .chart-title {
+        font-size: 1.2em;
+    }
+}

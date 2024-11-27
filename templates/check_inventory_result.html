@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Item Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/invo.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Item Details</h1>
+
+        {% if items %}
+            <table>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Expiry Date</th>
+                    <th>Quantity Limit</th>
+                </tr>
+                {% for item in items %}
+                <tr>
+                    <td>{{ item['Item ID'] }}</td>
+                    <td>{{ item['Item Name'] }}</td>
+                    <td>{{ item['Quantity'] }}</td>
+                    <td>{{ item['Unit Price'] }}</td>
+                    <td>{{ item['Expiry Date'] }}</td>
+                    <td>{{ item['Quantity Limit'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No items found with the given criteria.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

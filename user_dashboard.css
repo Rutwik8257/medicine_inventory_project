@@ -1,0 +1,82 @@
+/* Set up a full-screen background image */
+body {
+    background-image: url('../css/istockphoto-1369987284-2048x2048-transformed.jpeg'); /* Updated path for background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Better compatibility for mobile */
+}
+
+/* Center container with a card-like design */
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* White background with slight transparency */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Style for the heading */
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Box for the navigation links */
+.nav-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Navigation links styled as buttons */
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 10px 0; /* Space between buttons */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #030406;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+/* Button hover effect */
+.nav-links a:hover {
+    background-color: #333; /* Darker gray for subtle contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
